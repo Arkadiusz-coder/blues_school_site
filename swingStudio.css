@@ -1,0 +1,427 @@
+html
+{
+    scroll-behavior: smooth;
+}
+
+*, ::before, ::after
+{
+    box-sizing: border-box;
+}
+
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    background-image: linear-gradient(black, #011638, #2e294e, #9055a2, #d499b9, #e8c1c5, #2e294e, #011638, black);
+}
+
+h2, h3
+{
+    font-family: 'EB Garamond', serif;
+}
+
+h2
+{
+    font-size: 2.6rem;
+    font-weight: 700;
+}
+
+h3
+{
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.nav_bar
+{
+    text-align: center;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: black;
+    padding-bottom: 3rem;
+    padding-top: 1rem;
+}
+
+.container
+{
+    max-width: 614px;
+    padding: 2rem 2.5rem;
+    text-align: center;
+    margin: 0 auto;
+}
+
+logo 
+{
+    font-family: 'Carattere', cursive;
+    font-size: 2.5rem;
+    color: white;
+    margin: 0 auto;
+    padding: 1.5rem 0 1.5rem 2rem;
+}
+
+.logo_span
+{
+    font-family: 'Carattere', cursive;
+    color: rgb(209, 27, 27);
+}
+
+.nav_toggle {
+    cursor: pointer;
+    border: 0;
+    width: 3em;
+    height: 3em;
+    padding: 0em;
+    border-radius: 50%;
+    background: black;
+    color: white;
+    transition: opacity 250ms ease;
+    
+    
+    position: relative;
+    bottom: 0;
+    top: 2.5rem;
+    right: 7rem;
+}
+
+.hamburger {
+    width: 50%;
+    position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    display: block;
+    margin: 0 auto;
+    height: 3px;
+    background: white;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: " ";
+    width: 100%;
+}
+
+.hamburger::before {
+    transform: translateY(-6px);
+}
+
+.hamburger::after {
+    transform: translateY(3px);
+}
+
+.nav_menu {
+    visibility: hidden;
+    height: 0;
+    position: absolute;
+    right: 1rem;
+    margin-top: 1rem;
+}
+
+.nav--visible {
+    visibility: visible;
+    height: auto;
+    position: relative;
+    padding-top: 3rem;
+} 
+
+.nav_item
+{
+    padding-top: .7rem;
+}
+
+.nav_item > a
+{
+    font-family: Montserrat, sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    padding-right: 1rem;
+}
+
+.nav_item > a:hover
+{
+    cursor: pointer;
+    color: rgb(209, 27, 27);
+}
+
+.center_txt
+{
+    text-align: left;
+}
+
+.enter_text
+{
+    font-size: 1.6rem;
+    color: white;
+    padding-top: 2rem;
+}
+
+.schedule_label
+{
+    font-weight: 700;
+    color: white;
+}
+
+.schedule_lead
+{
+    font-size: 1.5rem;
+    color: white;
+    margin-top: -2rem;
+    text-transform: uppercase;
+}
+
+.schedule_day
+{
+    max-width: 246px;
+    background-color: #9055a2;
+    border: .1rem solid #d499b9;
+    border-radius: 1rem;
+    padding: .5rem;
+    margin: 1rem auto;
+}
+
+.day_name
+{
+    color: rgb(209, 27, 27);
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.classes_hour
+{
+    font-weight: bold;
+}
+
+.classes_label
+{
+    margin-top: -1rem;
+}
+
+.registration_form
+{
+    border: .2rem solid rgb(209, 27, 27);
+    border-radius: 1rem;
+    text-align: left;
+    padding: 0 2rem 2rem;
+    background-color: #d499b9;
+    margin-top: 5rem;
+}
+
+.form_title
+{
+    text-align: center;
+}
+
+.form_note
+{
+    margin-top: -1.5rem;
+    padding-inline: .5rem;
+}
+
+.user_info
+{
+    text-align: center;
+}
+
+input 
+{
+    padding: .5rem 2.5rem .5rem .5rem;
+    border-radius: .3rem;
+    border: none;
+    margin: .3rem auto .5rem;
+}
+
+.validation-message
+{
+    color: rgb(175, 4, 4);
+    font-size: 1rem;
+}
+
+#month
+{
+    padding: .5rem 3.5rem;
+    border-radius: .3rem;
+    border: none;
+    margin: .3rem auto .5rem;
+}
+
+#days
+{
+    padding: .4rem 4rem;
+    margin-bottom: .5rem;
+    border: none;
+    border-radius: .3rem;
+
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#info_part
+{
+    color: white;
+}
+
+#submit
+{
+    background-color: green;
+    color: white;
+    padding: 1rem 2.5rem;
+}
+
+#submit:hover
+{
+    cursor: pointer;
+    background-color: greenyellow;
+}
+
+.teachers_notes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.teacher_profile {
+    margin-bottom: 20px; /* space between profiles on smaller screens */
+}
+
+.teacher_name
+{
+    font-family: 'EB Garamond', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: -1rem;
+    margin-top: -.3rem;
+}
+
+.teacher_profile > img
+{
+    max-width: 300px;
+    border-radius: 100rem;
+    border: .3rem solid rgb(209, 27, 27);
+    margin-top: 2rem;
+}
+
+.teacher_profile > p
+{
+    color: white;
+}
+
+footer
+{
+    color: white;
+}
+
+.email
+{
+    padding-bottom: 1rem;
+}
+
+.address
+{
+    padding-bottom: 1rem;
+}
+
+.fb_link
+{
+    color: white;
+}
+
+.fb_link > svg:hover
+{
+    cursor: pointer;
+    fill: rgb(209, 27, 27);
+}
+
+@media (min-width: 886px)
+{
+    .nav_bar
+    { 
+        display: block;
+        padding-bottom: 5rem;
+        padding-top: .5rem;
+        margin-top: -5rem;
+        margin-bottom: 2rem;
+        margin: -5rem auto 2rem;
+    }
+
+    .hamburger
+    {
+        display: none;
+    }
+
+    .nav_menu
+    {
+        visibility: visible;
+        display: flex;
+        justify-items: center;
+        justify-content: center;
+        padding: 0;
+        margin: 0 4rem;
+    }
+
+    .nav_toggle
+    {
+        display: none;
+    }
+
+    .schedule_day
+    {
+        min-width: 246px;
+        border-radius: 1rem;
+        padding: .5rem;
+        margin: 1rem auto;
+    }
+
+    .mon_tue, .wed_thu
+    {
+        display: flex;
+        justify-content: center;
+    }
+
+    .colorChange
+    {
+        color: white;
+    }
+}
+
+@media (min-width: 1200px)
+{
+     .nav_menu
+     {
+        margin: 0 15rem;
+     }
+
+    .classes
+    {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .teachers_notes {
+        flex-direction: row; /* make child elements line up horizontally */
+        justify-content: center; /* center children horizontally */
+        align-items: center; /* center children vertically */
+        gap: 30px; /* gentle space between the two .teacher_profile elements */
+    }
+
+    .teacher_profile {
+        margin-bottom: 0;
+
+    .teacher_profile > img
+    {
+        max-width: 200px;
+    }
+}
