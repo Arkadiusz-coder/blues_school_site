@@ -88,11 +88,7 @@ function populateDays(month) {
 document.getElementById('month').addEventListener('change', function() {
     populateDays(this.value);
 });
-`````````````````````
-
-Conclusion
-
-This project represents a comprehensive web interface with interactive and user-friendly features. The thoughtful design and implementation of the navigation menu, form validation, smooth scrolling, and dynamic form fields collectively contribute to an engaging and seamless user experience.
+````````````````````
 
 
 
